@@ -19,6 +19,9 @@ const nadirkitapScraper = require('./scrapers/nadirkitap');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Trust proxy (for Render.com, Railway, etc.)
+app.set('trust proxy', 1);
+
 // Middleware
 app.use(helmet());
 app.use(cors());
